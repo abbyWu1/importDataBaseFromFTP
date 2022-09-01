@@ -1,0 +1,2 @@
+# importDataBaseFromFTP
+从FTP上导入数据到数据库中
