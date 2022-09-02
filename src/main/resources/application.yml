@@ -1,0 +1,4 @@
+Person:
+  name: abby
+  age: 13
+  like: one,two,three

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.importDataBaseFromFTP.importData.mapper.StaffMapper">
+    <resultMap id="BaseResultMap" type="com.example.importDataBaseFromFTP.entity.StaffInfo">
+        <result column="staff_no" jdbcType="VARCHAR" property="staffNo"/>
+        <result column="cust_name" jdbcType="VARCHAR" property="custName"/>
+        <result column="mobile" jdbcType="VARCHAR" property="mobile"/>
+        <result column="cert_code" jdbcType="VARCHAR" property="certCode"/>
+        <result column="branch_no" jdbcType="VARCHAR" property="branchNo"/>
+        <result column="branch_name" jdbcType="VARCHAR" property="branchName"/>
+        <result column="job_title" jdbcType="VARCHAR" property="jobTitle"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        asset_side,capital_side,seq,pre_date,acct_date,next_date,change_user,change_time,is_night,last_update,m_time
+    </sql>
+
+    <insert id="batchInser">
+        insert into staff_info(staff_no,cust_name,mobile,cert_code,branch_no,branch_name,job_title)
+        values
+        <foreach collection="staffInfos" item="staffInfo" separator=",">
+            (#{staffInfo.staffNo},#{staffInfo.custName},#{staffInfo.mobile},#{staffInfo.certCode},#{staffInfo.branchNo},#{staffInfo.branchName},#{staffInfo.jobTitle})
+        </foreach>
+    </insert>
+
+    <!-- 删除所有 -->
+    <update id="truncateTable" parameterType="java.lang.String">
+        truncate table ${table}
+    </update>
+
+</mapper>
