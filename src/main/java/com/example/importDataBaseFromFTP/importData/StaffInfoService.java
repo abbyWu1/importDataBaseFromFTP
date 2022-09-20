@@ -31,6 +31,7 @@ public class StaffInfoService {
     static final String FTP_USERNAME = "admin";
     static final String FTP_PASSWORD = "admin";
     static final String FTP_PATH = "/staff/";
+
     @Resource
     StaffMapper mapper;
 

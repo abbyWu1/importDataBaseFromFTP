@@ -1,4 +1,13 @@
-Person:
-  name: abby
-  age: 13
-  like: one,two,three
+server:
+  port: 8899
+spring:
+  application:
+    name: import-data-server
+  datasource:
+    driverClassName: com.alibaba.druid.proxy.DruidDriver
+    url: jdbc:mysql://127.0.0.1:3306/common?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis-plus:
+  mapperLocations: classpath:mapper/**/*.xml

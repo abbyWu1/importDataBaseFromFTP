@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("om.example.springbootStudy.**.mapper")
+@MapperScan("com.example.importDataBaseFromFTP.importData.mapper")
 public class SpringbootStudyApplication {
 
     public static void main(String[] args) {
