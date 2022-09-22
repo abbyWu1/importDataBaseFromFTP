@@ -17,11 +17,10 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
-
-@Service
 /**
  * 员工信息导入
  */
+@Service
 public class StaffInfoService {
     private static final Logger log = LoggerFactory.getLogger(StaffInfoService.class);
     static final String LOCALPATH = "/resource";
