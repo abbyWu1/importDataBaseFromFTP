@@ -67,22 +67,6 @@ public class FTPUtil {
         }
     }
 
-    /**
-     * 断开与ftp服务器的连接
-     *
-     * @since
-     */
-    public void disConnect() throws Exception {
-        try {
-            if (ftpClient != null) {
-                ftpClient.disconnect();
-            }
-        } catch (IOException ex) {
-            log.error("DisConnect to FTP server failure! Detail:", ex);
-            throw new Exception(ex);
-        }
-    }
-
 
     /**
      * 从ftp下载文件到本地
