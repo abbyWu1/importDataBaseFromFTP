@@ -15,7 +15,6 @@ import java.io.*;
 /**
  * FTP工具类<br>
  * 注：上传，可上传文件、文件夹；下载，仅实现下载文件功能，不能识别子文件夹
- *
  * @version 1.0.0
  */
 public class FTPUtil {
